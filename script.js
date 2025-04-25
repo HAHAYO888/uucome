@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3333';  // 修改為你的後端 API 地址
+const API_URL = 'https://great-first-dresser.glitch.me/';  // 修改為你的後端 API 地址
 
 // 查詢授權錢包
 async function checkWallet() {
