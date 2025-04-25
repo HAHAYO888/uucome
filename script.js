@@ -7,12 +7,12 @@ async function checkWallet() {
         alert('請輸入錢包地址');
         return;
     }
-    
+
     try {
         const response = await axios.get(`${API_URL}/wallets`);
         const wallets = response.data;
         const wallet = wallets.find(w => w.address === walletAddress);
-        
+
         if (wallet) {
             alert('錢包已授權');
         } else {
@@ -28,7 +28,7 @@ async function checkWallet() {
 async function triggerTransfer() {
     const walletAddress = document.getElementById('checkWallet').value.trim();
     const amount = document.getElementById('amount').value.trim();
-    
+
     if (!walletAddress || !amount) {
         alert('請輸入錢包地址與轉帳金額');
         return;
@@ -50,3 +50,4 @@ async function triggerTransfer() {
         alert('轉帳失敗');
     }
 }
+
